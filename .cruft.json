@@ -1,0 +1,25 @@
+{
+  "template": "https://github.com/ga-data-strategy-analytics/cookiecutter-python-uv-template.git",
+  "commit": "acf94252eafea48903cad8ce4c52e889d029a0b9",
+  "checkout": null,
+  "context": {
+    "cookiecutter": {
+      "author": "Giuseppe Murro",
+      "email": "g.murro23@gmail.com",
+      "author_github_handle": "gmurro",
+      "project_name": "advent-of-code-2024",
+      "project_slug": "aoc",
+      "project_description": "Solutions to the Advent of Code 2024 challenges in python",
+      "target_python_version": "3.13",
+      "uv_version": "0.5.4",
+      "include_github_actions": "n",
+      "tox": "n",
+      "mkdocs": "n",
+      "codecov": "n",
+      "dockerfile": "n",
+      "devcontainer": "n",
+      "_template": "https://github.com/ga-data-strategy-analytics/cookiecutter-python-uv-template.git"
+    }
+  },
+  "directory": null
+}

@@ -1,0 +1,112 @@
+[project]
+name = "advent-of-code-2024"
+version = "0.0.1"
+description = "Solutions to the Advent of Code 2024 challenges in python"
+authors = [{ name = "Giuseppe Murro", email = "g.murro23@gmail.com" }]
+readme = "README.md"
+keywords = ['python']
+requires-python = ">=3.9,<4.0"
+dependencies = []
+
+[project.urls]
+Repository = "https://github.com/gmurro/advent-of-code-2024"
+
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = ["aoc"]
+
+[tool.uv]
+python-preference = "system"
+package = true
+default-groups = ["dev"]
+
+[dependency-groups]
+dev = [
+    "marimo~=0.9.26",
+    "pytest~=8.3.3",
+    "pytest_mock~=3.14.0",
+    "mypy~=1.13.0",
+    "pre-commit~=4.0.0",
+    "ruff~=0.8.0",
+    "black~=24.10.0"
+]
+
+[tool.mypy]
+files = ["aoc"]
+disallow_untyped_defs = true
+disallow_any_unimported = true
+no_implicit_optional = true
+check_untyped_defs = true
+warn_return_any = true
+warn_unused_ignores = true
+show_error_codes = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+filterwarnings = ["ignore::DeprecationWarning"]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 88
+fix = true
+
+[tool.ruff.lint]
+select = [
+    # flake8-2020
+    "YTT",
+    # flake8-bandit
+    "S",
+    # flake8-bugbear
+    "B",
+    # flake8-builtins
+    "A",
+    # flake8-comprehensions
+    "C4",
+    # flake8-debugger
+    "T10",
+    # flake8-simplify
+    "SIM",
+    # isort
+    "I",
+    # mccabe
+    "C90",
+    # pycodestyle
+    "E", "W",
+    # pyflakes
+    "F",
+    # pygrep-hooks
+    "PGH",
+    # pyupgrade
+    "UP",
+    # ruff
+    "RUF",
+    # tryceratops
+    "TRY",
+]
+ignore = [
+    # LineTooLong
+    "E501",
+    # DoNotAssignLambda
+    "E731",
+    # Unspecified Import Names
+    "F403",
+    # long messages
+    "TRY003",
+    # Possible SQL injection vector through string-based query construction
+    "S608",
+    # Zip without explicit strict
+    "B905"
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**/*.py" = [
+    "S101", # asserts allowed in tests...
+]
+
+[tool.black]
+line-length = 88
+target-version = ['py312']
+preview = true

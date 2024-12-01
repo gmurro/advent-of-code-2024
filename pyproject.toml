@@ -6,7 +6,9 @@ authors = [{ name = "Giuseppe Murro", email = "g.murro23@gmail.com" }]
 readme = "README.md"
 keywords = ['python']
 requires-python = ">=3.9,<4.0"
-dependencies = []
+dependencies = [
+    "pandas~=2.2.3",
+]
 
 [project.urls]
 Repository = "https://github.com/gmurro/advent-of-code-2024"

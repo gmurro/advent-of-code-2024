@@ -17,7 +17,7 @@ def get_similarity_score(df: pd.DataFrame) -> int:
     int: The similarity score.
     """
     return sum(
-        location_id * df["second_group_ids"].value_counts().get(id, 0)
+        location_id * df["second_group_ids"].value_counts().get(location_id, 0)
         for location_id in df["first_group_ids"]
     )
 

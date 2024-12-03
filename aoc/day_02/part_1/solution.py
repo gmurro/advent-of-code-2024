@@ -42,8 +42,5 @@ def get_puzzle_solution() -> int:
 
 
 if __name__ == "__main__":
-    import time
-
-    time.perf_counter()
     solution = get_puzzle_solution()
     print(f"Total number of safe reports is: {solution}")
